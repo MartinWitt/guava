@@ -104,7 +104,7 @@ public abstract class ForwardingSortedMultiset<E extends @Nullable Object>
    */
   protected abstract class StandardDescendingMultiset extends DescendingMultiset<E> {
     /** Constructor for use by subclasses. */
-    public StandardDescendingMultiset() {}
+    protected StandardDescendingMultiset() {}
 
     @Override
     SortedMultiset<E> forwardMultiset() {
