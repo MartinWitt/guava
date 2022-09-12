@@ -306,7 +306,7 @@ public final class Iterables {
    * @param iterable the iterable to copy
    * @return a newly-allocated array into which all the elements of the iterable have been copied
    */
-  static @Nullable Object[] toArray(Iterable<?> iterable) {
+   @Nullablestatic Object[] toArray(Iterable<?> iterable) {
     return castOrCopyToCollection(iterable).toArray();
   }
 
@@ -390,7 +390,7 @@ public final class Iterables {
 
       @Override
       public String toString() {
-        return iterable.toString() + " (cycled)";
+        return iterable + " (cycled)";
       }
     };
   }
