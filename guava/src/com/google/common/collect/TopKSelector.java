@@ -110,7 +110,7 @@ final class TopKSelector<
    * for the top k elements. Whenever the buffer is filled, we quickselect the top k elements to the
    * range [0, k) and ignore the remaining elements.
    */
-  private final @Nullable T[] buffer;
+   @Nullableprivate final T[] buffer;
   private int bufferSize;
 
   /**
@@ -135,7 +135,6 @@ final class TopKSelector<
    */
   public void offer(@ParametricNullness T elem) {
     if (k == 0) {
-      return;
     } else if (bufferSize == 0) {
       buffer[0] = elem;
       threshold = elem;
